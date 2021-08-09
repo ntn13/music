@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- APlayer CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css"/>
+
+    <title>Online music</title>
+    <style>
+    	body{
+    		background-color: #f7f7f7;
+    		font-family: Open sans;
+    	}
+    	img{
+    		width: 100%;
+    		min-height: 250px;
+    	}
+    	.main{
+    		padding: 40px 0;
+    	}
+    	.col-md-3{
+    		margin-bottom: 40px;
+    	}
+    	.album-poster{
+    		position: relative;
+    		display: block;
+    		border-radius: 7px;
+    		overflow: hidden;
+    		box-shadow: 0 15px 35px #3d2173a1;
+    		transition: all ease 0.4s;
+    	}
+    	.album-poster:hover{
+    		box-shadow: none;
+    		transform: scale(0.98) translateY(5px);
+    	}
+    	h3{
+    		font-size: 34px;
+    		margin-bottom: 34px;
+    		border-bottom: 4px solid #e6e6e6;
+    		padding-bottom: 15px;
+    	}
+    	p{
+    		font-size: 15px;
+    	}
+    	h4{
+    		font-size: 16px;
+    		text-transform: uppercase;
+    		margin-top: 15px;
+    		font-weight: 700;
+    	}
+		
+
+		/*default is hide music player*/
+		#aplayer{
+			position: fixed;
+			bottom: -100%;
+			left: 0;
+			width: 100%;
+			margin: 0;
+			box-shadow: 0 -2px 2px #dadada;
+			background-color: #fff;
+			transition: all ease 0.5s;
+		}
+		#aplayer.showPlayer{
+			bottom: 0;
+		}
+
+		
+		/*MUSIC PLAYER CUSTOMIZING STYLE*/
+		span{
+			color: #000 !important;
+			font-size: 16px;
+		}
+		.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded{
+			background: #e0e0e0;
+    		height: 4px;
+		}
+		.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played{
+			height: 4px;
+			background-color: #2196F3 !important;
+		}
+		.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb{
+			background-color: #2196F3 !important;
+		}
+
+		.aplayer .aplayer-icon{
+			width: 20px;
+			height: 20px;
+		}
+		.aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path {
+		    fill: #000;
+		}
+		.aplayer .aplayer-info .aplayer-music{
+			margin-bottom: 5px;
+		}
+
+
+    </style>
+ 	</head>
+	<body>
+
+<div class="main">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Tìm Nhạc Còn Lâu Hơn Code :))</h3>
+			</div>
+			<div class="col-md-3">
+				<a href="javascript:void();" class="album-poster" data-switch="0">
+					<img src="https://i.ytimg.com/vi/CImBCJxa4a4/maxresdefault.jpg" alt="">
+				</a>
+				<h4>Lối Nhỏ - Khóc</h4>
+				<p>Đen Vâu - Đông Nhi</p>
+			</div>
+			<div class="col-md-3">
+				<a href="#" class="album-poster" data-switch="1">
+					<img src="https://popsimg.akamaized.net/api/v2/containers/file2/cms_topic/phucacoustic_05_seriesdetailimagemobile-e4f411d40d92-1621250875300-UNMvvmVK.png?v=0" alt="">
+				</a>
+				<h4>Melancholy</h4>
+				<p>Tăng Phúc</p>
+			</div>
+			<div class="col-md-3">
+				<a href="#" class="album-poster" data-switch="2">
+					<img src="https://meta.vn/Data/image/2020/12/19/loi-bai-hat-di-ve-nha-2.jpg" alt="">
+				</a>
+				<h4>Đi Về Nhà</h4>
+				<p>Đen Vâu - Justa Tee</p>
+			</div>
+
+			<div class="col-md-3">
+				<a href="#" class="album-poster" data-switch="3">
+					<img src="https://hgth.onecmscdn.com/thumbs/1000x0/2021/04/13/icdn-dantri-com-vn_xuanmai-12413-1618245003699.jpeg" alt="">
+				</a>
+				<h4>Nàng Thơ</h4>
+				<p>Hoàng Dũng</p>
+			</div>
+			<div class="col-md-3">
+				<a href="#" class="album-poster" data-switch="4">
+					<img src="https://avatar-ex-swe.nixcdn.com/song/2018/05/23/7/8/c/7/1527044645585_640.jpg" alt="">
+				</a>
+				<h4>Lãng Quên Chiều Thu</h4>
+				<p>Hoa Vinh</p>
+			</div>
+			<div class="col-md-3">
+				<a href="#" class="album-poster" data-switch="5">
+					<img src="https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/f/8/1/e/f81efd92fa9a3d52eb37f3b867ab9d32.jpg" alt="">
+				</a>
+				<h4>Bông Hoa Đẹp Nhất</h4>
+				<p>Quân AP</p>
+			</div>
+			<div class="col-md-3">
+				<a href="#" class="album-poster" data-switch="6">
+					<img src="https://avatar-ex-swe.nixcdn.com/song/2018/05/01/7/b/0/1/1525181506795_640.jpg" alt="">
+				</a>
+				<h4>Đừng Như Thói Quen</h4>
+				<p>Jaykii- Sara Luu </p>
+			</div>
+			<div class="col-md-3">
+				<a href="#" class="album-poster" data-switch="7">
+					<img src="http://kenh14cdn.com/2016/anh5-1482692480427.jpg" alt="">
+				</a>
+				<h4>Cha Già Rồi Đúng Không</h4>
+				<p>Ali Hoàng Dương</p>
+			</div>
+			
+		</div>
+
+
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Mix</h3>
+			</div>
+			<div class="col-md-2">
+				<a href="#" class="album-poster" data-switch="8">
+					<img src="https://i1.sndcdn.com/artworks-000362866176-i8qs78-t500x500.jpg" alt="">
+				</a>
+				<h4>BLACK-PINK</h4>
+				<p>DduduDdudu</p>
+			</div>
+			<div class="col-md-2">
+				<a href="#" class="album-poster" data-switch="9">
+					<img src="https://images.pexels.com/photos/838702/pexels-photo-838702.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+				</a>
+				<h4>Orinn EDM Remix</h4>
+				<p>Chỉ Muốn Bên Em Lúc Này</p>
+			</div>
+			<div class="col-md-2">
+				<a href="#" class="album-poster" data-switch="10">
+					<img src="https://images.pexels.com/photos/894156/pexels-photo-894156.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+				</a>
+				<h4>Lost Frequencies</h4>
+				<p>Reality</p>
+			</div>
+			
+			<div class="col-md-2">
+				<a href="#" class="album-poster" data-switch="11">
+					<img src="https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/9/b/4/0/9b40a25f9a606520333fa79f1fdf5ea6.jpg" alt="">
+				</a>
+				<h4>Erik</h4>
+				<p>Chạm Đáy Nỗi Đau</p>
+			</div>
+			<div class="col-md-2">
+				<a href="#" class="album-poster" data-switch="12">
+					<img src="https://cdn.tgdd.vn/Files/2021/06/18/1361217/top-bai-hat-hay-nhat-cua-duc-phuc-khien-nguoi-n-2.jpg" alt="">
+				</a>
+				<h4>Đức Phúc</h4>
+				<p>Hơn Cả Yêu</p>
+			</div>
+			<div class="col-md-2">
+				<a href="#" class="album-poster" data-switch="13">
+					<img src="https://event.mediacdn.vn/2020/8/14/st-15973999489741584015103.jpg" alt="">
+				</a>
+				<h4> Sơn Tùng MTP </h4>
+				<h5>Như Ngày Hôm Qua </h5>
+			</div>
+		</div>
+
+
+	</div>
+</div>
+
+	<div id="aplayer"></div>
+
+	<!-- Jquery Link -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<!-- Bootstrap Link -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<!-- APlayer Jquery link -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>	
+
+	<script>
+
+
+		// NOW I CLICK album-poster TO GET CURRENT SONG ID
+		$(".album-poster").on('click', function(e){
+			var dataSwitchId = $(this).attr('data-switch');
+			//console.log(dataSwitchId);
+
+			// and now i use aplayer switch function see
+			ap.list.switch(dataSwitchId); //this is static id but i use dynamic 
+
+			// aplayer play function
+			// when i click any song to play
+			ap.play();
+
+			// click to slideUp player see
+			$("#aplayer").addClass('showPlayer');
+		});
+
+		const ap = new APlayer({
+		    container: document.getElementById('aplayer'),
+		    listFolded: true,
+		    audio: [
+		    {
+		        name: 'Lối Nhỏ - Khóc',
+		        artist: 'Đen Vâu - Đông Nhi',
+		        url: 'source/LoiNhoKhoc.mp3',
+		        cover: 'https://kenh14cdn.com/thumb_w/620/203336854389633024/2021/1/21/photo-1-1611234457730841705867.jpg'
+		    },
+			{
+		        name: 'Melancholy',  // SONG NAME
+		        artist: 'Tăng Phúc', //ARTIST NAME
+		        url: 'source/Melancholy.mp3', // PATH NAME AND SONG URL
+		        cover: 'https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/b/f/2/b/bf2b517a0aa2448aa9e564d9e89a88de.jpg' // COVER IMAGE
+		    },
+			{
+				name: 'ĐI VỀ NHÀ',
+				artist: 'Đen Vâu - Justa Tee',
+				url: 'source/DiVeNha.mp3',
+				cover: 'https://meta.vn/Data/image/2020/12/19/loi-bai-hat-di-ve-nha-2.jpg',
+			},
+			{
+				name: 'Nàng Thơ',
+				artist: 'Hoàng Dũng',
+				url: 'source/NangTho.mp3',
+				cover: 'https://hgth.onecmscdn.com/thumbs/1000x0/2021/04/13/icdn-dantri-com-vn_xuanmai-12413-1618245003699.jpeg',
+			},
+			{
+				name: 'Lãng Quên Chiều Thu',
+				artist: 'Hoa Vinh',
+				url: 'source/LangQuenChieuThu.mp3',
+				cover: 'https://avatar-ex-swe.nixcdn.com/song/2018/05/23/7/8/c/7/1527044645585_640.jpg',
+			},
+			{
+				name: 'Bông Hoa Đẹp Nhất',
+				artist: 'Quân AP',
+				url: 'source/BongHoaDepNhat.mp3',
+				cover: 'https://cayvahoa.net/wp-content/uploads/2016/04/cac-loai-hoa-dep-nhat-the-gioi.jpg',
+			},
+			{
+				name: 'Đừng Như Thói Quen',
+				artist: 'Jaykii- Sara Luu',
+				url: 'source/DungNhuThoiQuen.mp3',
+				cover: 'https://avatar-ex-swe.nixcdn.com/song/2018/05/01/7/b/0/1/1525181506795_640.jpg',
+			},
+			{
+				name: 'Cha Già Rồi Đúng Không',
+				artist: 'Ali Hoàng Dương',
+				url: 'source/ChaGiaRoiDungKhong.mp3',
+				cover: 'http://kenh14cdn.com/2016/anh5-1482692480427.jpg',
+			},
+			{
+				name: 'DduduDdudu',
+				artist: 'BLACK-PINK',
+				url: 'source/DduduDdudu.mp3',
+				cover: 'https://i1.sndcdn.com/artworks-000366765243-d9n7n3-t500x500.jpg',
+			},			
+			{
+				name: 'Chỉ Muốn Bên Em Lúc Này',
+				artist: 'Remix',
+				url: 'source/ChiMuonBenEmLucNay.mp3',
+				cover: 'http://kenh14cdn.com/2016/anh5-1482692480427.jpg',
+			},			
+			{
+				name: 'Reality',
+				artist: 'Lost Frequencies',
+				url: 'source/Reality.mp3',
+				cover: 'https://avatar-ex-swe.nixcdn.com/singer/avatar/2018/12/26/6/1/c/8/1545810387947_600.jpg',
+			},			
+			{
+				name: 'Cham Đáy Nổi Đau',
+				artist: 'Erik',
+				url: 'source/ChamDayNoiDau.mp3',
+				cover: 'https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/9/b/4/0/9b40a25f9a606520333fa79f1fdf5ea6.jpg',
+			},			
+			{
+				name: 'Hơn Cả Yêu',
+				artist: 'Đức Phúc',
+				url: 'source/HonCaYeu.mp3',
+				cover: 'https://cdn.tgdd.vn/Files/2021/06/18/1361217/top-bai-hat-hay-nhat-cua-duc-phuc-khien-nguoi-n-2.jpg',
+			},
+			{
+				name: 'Như Ngày Hôm Qua',
+				artist: 'Ali Hoàng Dương',
+				url: 'source/NhuNgayHomQua.mp3',
+				cover: 'https://event.mediacdn.vn/2020/8/14/st-15973999489741584015103.jpg',
+			},
+
+
+
+		    ]
+		});
+	</script>
+
+	</body>
+</html>
